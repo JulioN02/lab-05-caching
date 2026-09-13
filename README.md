@@ -4,6 +4,7 @@
 
 > Hands-on lab: un experimento, no un producto. Este README cubre la definición, la hipótesis, el plan de experimentos y la medición real de la comparativa entre la lectura directa a PostgreSQL, el cache-aside con TTL y la invalidación por escritura.
 > **Estado**: ✅ Completado — implementado, medido y verificado (cache-aside + TTL + invalidación por escritura · 18/18 tests DB-free · typecheck limpio).
+> **Repositorio**: [github.com/JulioN02/lab-05-caching](https://github.com/JulioN02/lab-05-caching)
 > **Fecha de medición**: 2026-09-12 · evidencia regenerable en `docs/output-*.txt` (R14).
 
 ## Problema
