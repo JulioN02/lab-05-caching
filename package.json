@@ -1,0 +1,30 @@
+{
+  "name": "lab-05-caching",
+  "version": "1.0.0",
+  "description": "Laboratorio de caching - cache-aside con TTL e invalidación por escritura contra PostgreSQL",
+  "private": true,
+  "type": "module",
+  "engines": {
+    "node": ">=26.0.0"
+  },
+  "scripts": {
+    "test": "node --test --test-concurrency=1",
+    "typecheck": "tsc --noEmit",
+    "db:setup": "node src/setup.ts",
+    "db:seed": "node src/setup.ts --reseed",
+    "db:reset": "node src/setup.ts --fresh",
+    "exp:baseline": "node src/exp-01-baseline.ts",
+    "exp:cache-ttl": "node src/exp-02-cache-ttl.ts",
+    "exp:invalidate": "node src/exp-03-invalidate.ts",
+    "exp:measure": "node src/exp-04-measure.ts",
+    "evidence": "npm run exp:baseline > docs/output-01-baseline.txt && npm run exp:cache-ttl > docs/output-02-cache-ttl.txt && npm run exp:invalidate > docs/output-03-invalidate.txt && npm run exp:measure > docs/output-04-measure.txt && npm test > docs/output-test.txt"
+  },
+  "dependencies": {
+    "pg": "^8.13.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.9.3",
+    "@types/node": "^26.0.0",
+    "@types/pg": "^8.11.0"
+  }
+}
